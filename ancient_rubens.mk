@@ -8,14 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AncientOS stuff.
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
 # Inherit from rubens device
 $(call inherit-product, device/xiaomi/rubens/device.mk)
 
 PRODUCT_DEVICE := rubens
-PRODUCT_NAME := lineage_rubens
+PRODUCT_NAME := ancient_rubens
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22041211AC
 PRODUCT_MANUFACTURER := Xiaomi
@@ -37,3 +37,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="missi-user 12 SP1A.210812.016 V13.0.24.0.SLNCNXM release-keys"
 
 BUILD_FINGERPRINT := Redmi/rubens/rubens:12/SP1A.210812.016/V13.0.24.0.SLNCNXM:user/release-keys
+
+# Ancient
+ANCIENT_OFFICIAL=true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+ANCIENT_GAPPS := true
+#ANCIENT_WEEABO := true
